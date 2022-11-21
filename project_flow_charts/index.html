@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+<script src="scripts.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="header">
+		<div class="logo">
+      		Project flow charts
+      		<p>Add columns and tiles, and move them</p>
+    	</div>
+  	</div>
+  	<div class="nav">
+    	<button onclick="createColumn()">Add Column</button>
+    	<button  onclick="createTile()">Add Tile</button>
+  	</div>
+	<div id="content">
+		<div class="column" id="default" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<div class="tile" draggable="true" ondragstart="drag(event)" id="tile#1">Tile</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
