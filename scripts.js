@@ -46,6 +46,17 @@ function createTile() {
     document.getElementById("default").appendChild(newTile);
 }
 
-function promptTest() {
-    prompt("Please enter your name", "Harry Potter");
+function exportHTML() {
+    let content = document.getElementById("content");
+    
+    $.ajax({
+        type: "POST",
+        url : "save-to-db.php",
+        data: content,
+        processData: false,
+        success: function(){  
+            console.log("Data send!");
+            //window.location.href = "save-to-db.php";                        
+        }
+    });
 }

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-<script src="scripts.js"></script>
+	<script src="scripts.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -18,7 +19,8 @@
   	</div>
   	<div class="nav">
     	<button onclick="createColumn()">Add Column</button>
-    	<button  onclick="createTile()">Add Tile</button>
+    	<button onclick="createTile()">Add Tile</button>
+		<button onclick="exportHTML()">Save to DB</button>
   	</div>
 	<div id="content">
 		<div class="column" id="default" ondrop="drop(event)" ondragover="allowDrop(event)">
