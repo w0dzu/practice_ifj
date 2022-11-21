@@ -13,7 +13,7 @@ function drop(ev) {
 }
 
 function createColumn() {
-    let inputData = prompt("Enter column name: ");
+    let title = prompt("Enter column name: ");
 
     let newColumn = document.createElement("div");
     newColumn.classList.add("column");
@@ -21,14 +21,15 @@ function createColumn() {
     newColumn.setAttribute("ondragover", "allowDrop(event)");
 
     let newPara = document.createElement("p");
-    newPara.appendChild(document.createTextNode(inputData));
+    newPara.appendChild(document.createTextNode(title));
     newColumn.appendChild(newPara);
 
     document.getElementById("content").appendChild(newColumn);
 }
 
 function createTile() {
-    let inputData = prompt("Enter column name: ");
+    let title = prompt("Enter tile name: ");
+    let content = prompt("Enter content");
 
     let newTile = document.createElement("div");
     newTile.classList.add("tile");
@@ -37,8 +38,10 @@ function createTile() {
     newTile.setAttribute("ondragstart", "drag(event)");
 
     let newPara = document.createElement("p");
-    newPara.appendChild(document.createTextNode(inputData));
+    newPara.appendChild(document.createTextNode(title));
     newTile.appendChild(newPara);
+
+    newTile.appendChild(document.createTextNode(content));
 
     document.getElementById("default").appendChild(newTile);
 }
